@@ -39,23 +39,23 @@ public class GameServlet extends HttpServlet {
                         case NOBODY:
                             break;
                         case COMPUTER:
-                            request.setAttribute("winner", "The computer");
+                            request.setAttribute("winner", "El computador");
                             break;
                         case USER:
-                            request.setAttribute("winner", "You");
+                            request.setAttribute("winner", "Usted");
                             break;
                     }
                 }
                 break;
             case COMPUTER:
-                request.setAttribute("winner", "The computer");
+                request.setAttribute("winner", "El computador");
                 break;
             case USER:
-                request.setAttribute("winner", "You");
+                request.setAttribute("winner", "Usted");
                 break;
         }
         if(winner == GamePlayer.NOBODY && !game.hasEmptyCell()){
-            request.setAttribute("winner", "Nobody");
+            request.setAttribute("winner", "Ninguno");
         }
         request.getRequestDispatcher("/game.jsp").forward(request, response);
     }
@@ -100,3 +100,4 @@ public class GameServlet extends HttpServlet {
     }// </editor-fold>
 
 }
+

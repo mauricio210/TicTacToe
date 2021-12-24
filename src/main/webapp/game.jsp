@@ -42,9 +42,9 @@
             </c:forEach>
         </table>
         <c:if test="${winner != null}">
-            <h2>${winner} Won!</h1>
+            <h2>${winner} Gano</h1>
             <form action="index.jsp" method="post">
-                <input type="submit" name="Replay" value="Play again"><br/>
+                <input type="submit" name="Replay" value="Juega de nuevo"><br/>
                             </form>
         </c:if>
     </body>
